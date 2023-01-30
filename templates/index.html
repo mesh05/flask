@@ -1,20 +1,39 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <title>hello</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/homestyle.css') }}"
+      type="text/css"
+    />
+    <title>Exam Management</title>
   </head>
   <body>
-    <form action="/greet" method="post">
-      <input
-        autocomplete="off"
-        autofocus
-        placeholder="NAME"
-        name="name"
-        type="text"
-      />
-      <button type="submit">Greet</button>
-    </form>
+    <header>
+      <div class="main">
+        <img src="/static/images/ems.JPG" class="logo" />
+        <nav>
+          <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="title">
+        <h1>EXAM MANAGEMENT SYSTEM</h1>
+      </div>
+      <div class="matter">
+        <p>
+          An exam management is a software developed to manage the exam process.
+          It covers the activities that are related to examination management
+          like allotting invigilators to the specified room numbers according to
+          their age and time table.
+        </p>
+      </div>
+    </header>
   </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/loginstyle.css') }}"
+      type="text/css"
+    />
+    <title>LOGIN FORM</title>
+  </head>
+  <body>
+    <div class="main">
+      <img src="/static/images/ems.JPG" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>
+          <li><a href="{{ url_for('welcome') }}">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="login">
+      <h1>Login Here</h1>
+      <form action="/welcome" method="post">
+        <p>USERNAME</p>
+        <input type="text" name="user" placeholder="Enter Username" />
+        <p>PASSWORD</p>
+        <input type="text" name="pass" placeholder="Enter Password" />
+        <input type="submit" value="LOGIN" /><br />
+        <a href="#">Forgot Your Password</a> <br />
+        <a href="#">Create new Account</a>
+      </form>
+    </div>
+  </body>
+</html>
