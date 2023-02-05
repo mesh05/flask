@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 
-USERS = {"prathamesh": "pratham"}
+USERS = {"prathamesh": "pratham","SSSM": "SSSM","Shoaib":"Chutiya"}
 
 
 @app.route("/")
@@ -18,7 +18,9 @@ def welcome():
         username = request.form.get("user")
         password = request.form.get("pass")
     if (USERS[username] == password):
-        return "hello"
+        if (username=="Shoaib"):
+            return ("hello,Chutiya")
+        return ("hello" +username)
     else:
         return "Failed login"
 
