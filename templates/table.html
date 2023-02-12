@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    Name: {{ name }} 
+    ID: {{ id }} 
+    Age: {{ age }}
+    Department: {{ dept}} 
+    Designation: {{ desg }} 
+    
+    <table>
+      <thead>
+        <tr>
+          {% for i in key %}
+          <th>{{ i }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in value %}
+        <tr>
+          {% for j in range(0,8) %}
+          <td>{{ i[j] }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

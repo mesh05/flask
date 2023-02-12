@@ -1,6 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/loginstyle.css') }}"
+      type="text/css"
+    />
+    <title>Input Form</title>
+  </head>
   <body>
-    {% for username in USERS %} {{username}} {% endfor %}
+    <div class="Enter">
+      <h1>hello, {{ name }}</h1>
+      <form action="/details" method="post">
+        <p>DAY</p>
+        <input type="text" name="user" placeholder="Enter DAY" required />
+        <p>START</p>
+        <input type="number" name="start" placeholder="START TIME" required />
+        <p>END</p>
+        <input type="number" name="end" placeholder="END TIME" required />
+        <p>HALLS</p>
+        <input type="number" name="hall" placeholder="HALLS" required />
+        <input type="submit" value="GO" /><br />
+      </form>
+    </div>
   </body>
 </html>
