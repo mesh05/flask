@@ -58,7 +58,9 @@ def welcome():
                 for k in key:
                     row.append(det[j][k])
                 value.append(row)
-    return render_template("table.html", name=name, key=key, value=value, dept=dept, id=st_id, desg=desg, age=age)
+            return render_template("welcome.html")
+            # return render_template("table.html", name=name, key=key, value=value, dept=dept, id=st_id, desg=desg, age=age)
+    return "login failed!!"
 
 
 @app.route("/login", methods=["GET", "POST"])
